@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--サイトを表示させない-->
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="旭川市内の賃貸物件を大家自らで紹介しています。入居者募集中の物件あります。市立旭川病院直近の旭川市金星町に所在。即入居可能！管理は管理会社にお願いしています。"
+    />
+    <meta name="keywords" content="旭川物件,旭川賃貸,旭川不動産,旭川" />
+    <meta name="author" content="yamaguchi yuki" />
+
+    <title>ReBASE HOME－入居者募集中－</title>
+
+    <!-- Googleフォント（Noto Sans JP + Roboto） -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon" />
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="ページタイトル" />
+    <meta property="og:description" content="サイトの説明" />
+    <meta property="og:image" content="images/ogp.jpg" />
+    <meta property="og:url" content="https://example.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+
+  <body>
+    <!-- ヘッダー -->
+    <header class="header fade-in">
+      <div class="header-inner">
+        <h1 class="header__logo">ReBASE HOME－入居者募集中－</h1>
+        <div class="menu-btn" id="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ドロワーメニュー -->
+    <nav class="drawer-menu" id="drawer-menu">
+      <div class="close-btn" id="close-btn">&times;</div>
+      <!-- ここが×ボタン！ -->
+      <ul>
+        <li><a href="#借りる">借りる</a></li>
+        <li><a href="#買う">買う</a></li>
+        <li><a href="#大家について">大家について</a></li>
+        <li><a href="#問い合わせ">問い合わせ</a></li>
+      </ul>
+    </nav>
+
+    <!--fv-->
+    <div class="video-wrapper">
+      <!-- PC用動画 -->
+      <video class="video-pc" autoplay muted playsinline>
+        <source src="./mp4/pc_top.mp4" type="video/mp4" />
+      </video>
+
+      <!-- スマホ用動画 -->
+      <video class="video-sp" autoplay muted playsinline>
+        <source src="./mp4/sp_top.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!--借りる-->
+    <section id="借りる" class="借りる">
+      <div class="inner">
+        <h2 class="section-heading1 fade-in">｜借りる</h2>
+        <div class="about-contents">
+          <img
+            src="./img/gaikann1.jpg"
+            alt="外観写真"
+            class="about-img fade-in"
+          />
+          <div class="about-text-contents fade-in">
+            <p class="about-text fade-in">
+              入居者募集中の賃貸アパートございます。
+              <br />市立旭川病院は徒歩圏内、旭川中心部からも近く、利便性の良いオススメ地域です。<br />詳細は下記からご覧ください。
+            </p>
+            <button
+              class="simple-button fade-in"
+              onclick="location.href='./page2.html'"
+            >
+              物件を見る
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--買う-->
+    <section id="買う" class="買う">
+      <div class="inner">
+        <h2 class="section-heading2 fade-in">｜買う</h2>
+        <div class="about-contents2">
+          <div class="about-text-contents">
+            <p class="about-text fade-in">
+              現在売り出し中の物件はございません。
+            </p>
+          </div>
+          <img
+            src="./img/junbityuu.png"
+            alt="現在売り出しなし"
+            class="about-img fade-in"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--大家について-->
+    <section id="大家について" class="大家について">
+      <div class="inner">
+        <h2 class="section-heading1 fade-in">｜大家について</h2>
+        <div class="about-contents">
+          <img src="./img/logo2.png" alt="" class="about-img fade-in" />
+          <div class="about-text-contents">
+            <p class="about-text-main fade-in">どんな人が大家なの？</p>
+            <p class="about-text-sub fade-in">
+              私たちは夫婦で会社員勤めをしながら<br
+                class="sp-only"
+              />アパートの貸出をメインに行っています。<br
+                class="sp-only"
+              />現在は管理会社様への管理をお願いしていますが<br />管理会社様と協力をしながら
+            </p>
+            <p class="about-text-1 fade-in">
+              居心地の良い <br>長く住みたくなるお家作り
+            </p>
+            <p class="about-text-2 fade-in">を目指しています。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--問い合わせ-->
+    <section id="問い合わせ" class="問い合わせ">
+      <div class="inner">
+        <h2 class="section-heading2 fade-in">｜問い合わせ</h2>
+        <div class="about-contents2">
+          <div class="about-text-contents">
+            <p class="about-text fade-in">
+              お問い合わせは管理会社へお願いします。<br />
+              管理会社：株式会社銀座ビルセンター<br />
+              電話番号：0166-24-2155<br />
+            </p>
+          </div>
+          <img
+            src="./img/toiawase1.png"
+            alt="問い合わせ画像"
+            class="about-img fade-in"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--フッター-->
+    <footer class="footer">
+      <button id="back-to-top">TOPへ戻る</button>
+      <div class="footer-logo">
+        <img src="./img/fotter.jpeg" alt="ReBASE HOME" />
+      </div>
+      <div class="footer-copy-wrapper">
+        <small class="footer-copylight"
+          >&copy;2025 ReBASE HOME</small
+        >
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
