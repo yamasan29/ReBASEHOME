@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--サイトを表示させない-->
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="ここにサイトの説明を入れる" />
+    <meta name="keywords" content="旭川物件,旭川賃貸,旭川不動産,旭川" />
+    <meta name="author" content="ゆうき" />
+
+    <title>物件を見る</title>
+
+    <!-- Googleフォント（Noto Sans JP + Roboto） -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" href="./css/reset2.css" />
+    <link rel="stylesheet" href="./css/page2.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="ページタイトル" />
+    <meta property="og:description" content="サイトの説明" />
+    <meta property="og:image" content="images/ogp.jpg" />
+    <meta property="og:url" content="https://example.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <!--ヘッダー-->
+    <header class="header fade-in">
+      <div class="header-inner">
+        <h1 class="header__logo">ReBASE HOME－入居者募集中－</h1>
+        <div class="menu-btn" id="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ドロワーメニュー -->
+    <nav class="drawer-menu" id="drawer-menu">
+      <div class="close-btn" id="close-btn">&times;</div>
+      <!-- ここが×ボタン！ -->
+      <ul>
+        <li><a href="index.html#借りる">借りる</a></li>
+        <li><a href="index.html#買う">買う</a></li>
+        <li><a href="index.html#大家について">大家について</a></li>
+        <li><a href="index.html#問い合わせ">問い合わせ</a></li>
+      </ul>
+    </nav>
+
+    <!--メインコンテンツ-->
+    <div class="property-header">
+      <h1 class="property-title">旭川市金星町 ライフ</h1>
+      <hr class="title-divider" />
+      <div class="property-details">
+        <div class="detail-item">
+          <span class="label">賃料(管理費込み）</span>
+          <span class="value">45,000<span class="currency">円</span></span>
+        </div>
+        <div class="detail-item">
+          <span class="label">住所</span>
+          <span class="value">北海道旭川市金星町２丁目３番７号</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">間取り</span>
+          <span class="value">1LDK [1階/2階]</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 物件画像ギャラリー -->
+    <div class="image-gallery-container">
+      <div class="main-image-area">
+        <img
+          id="mainImage"
+          src="./img/gaikann2.jpg"
+          alt="物件外観"
+          class="main-image"
+          data-full="./img/gaikann2.jpg"
+        />
+      </div>
+      <div class="thumbnail-area">
+        <div class="thumbnail-row">
+          <img
+            src="./img/gaikannyoko.jpg"
+            alt="物件外観"
+            class="thumbnail"
+            data-full="./img/gaikannyoko.jpg"
+          />
+          <img
+            src="./img/ima.jpeg"
+            alt="室内1"
+            class="thumbnail"
+            data-full="./img/ima.jpeg"
+          />
+        </div>
+        <div class="thumbnail-row">
+          <img
+            src="./img/okuyuki.jpeg"
+            alt="室内2"
+            class="thumbnail"
+            data-full="./img/okuyuki.jpeg"
+          />
+          <img
+            src="./img/kittin2.jpeg"
+            alt="キッチン"
+            class="thumbnail"
+            data-full="./img/kittin2.jpeg"
+          />
+        </div>
+        <div class="thumbnail-row">
+          <img
+            src="./img/senmen.jpeg"
+            alt="洗面台"
+            class="thumbnail"
+            data-full="./img/senmen.jpeg"
+          />
+          <img
+            src="./img/furo.jpeg"
+            alt="風呂"
+            class="thumbnail"
+            data-full="./img/furo.jpeg"
+          />
+        </div>
+        <div class="thumbnail-row">
+          <img
+            src="./img/toile.jpeg"
+            alt="トイレシャワー"
+            class="thumbnail"
+            data-full="./img/toile.jpeg"
+          />
+          <img
+            src="./img/kutudana.jpeg"
+            alt="靴置き場"
+            class="thumbnail"
+            data-full="./img/kutudana.jpeg"
+          />
+        </div>
+        <div class="thumbnail-row">
+          <img
+            src="./img/monita.jpeg"
+            alt="モニター"
+            class="thumbnail"
+            data-full="./img/monita.jpeg"
+          />
+          <img
+            src="./img/tansu.jpeg"
+            alt="収納"
+            class="thumbnail"
+            data-full="./img/tansu.jpeg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- 情報 -->
+
+    <section class="property-info">
+      <h2 class="info-title">オススメポイント</h2>
+      <div class="info-content">
+        <p class="info-text">
+          旭川市金星町に位置する1LDKのアパートです。<br />
+          近隣には市立旭川病院やコンビニなどがあり、生活に便利な立地です。<br />また駐車場内はロードヒーティングを敷いているため、除雪の心配不要です。<br />
+          詳細は気軽にお問い合わせください
+        </p>
+      </div>
+    </section>
+
+    <section class="life-information">
+      <h2 class="life-info-title">物件情報</h2>
+      <div class="life-info-table-container">
+        <table>
+          <tr>
+            <th class="category">物件名</th>
+            <td class="facility-name">ライフ</td>
+            <th class="category">所在地</th>
+            <td class="facility-name">北海道旭川市金星町２丁目３番７号</td>
+          </tr>
+          <tr>
+            <th class="category">交通</th>
+            <td class="facility-name">旭川駅 車で約７分</td>
+            <th class="category">間取り</th>
+            <td class="facility-name">1LDK（内訳LD6 K5 洋6)</td>
+          </tr>
+          <tr>
+            <th class="category">戸数</th>
+            <td class="facility-name">4戸</td>
+            <th class="category">空室</th>
+            <td class="facility-name">1階 1戸 / 2階 1戸</td>
+          </tr>
+          <tr>
+            <th class="category">築年数</th>
+            <td class="facility-name">2002年3月</td>
+            <th class="category">構造</th>
+            <td class="facility-name">木造</td>
+          </tr>
+          <tr>
+            <th class="category">階数</th>
+            <td class="facility-name">地上2階建て</td>
+            <th class="category">家賃</th>
+            <td class="facility-name">40,000円</td>
+          </tr>
+          <tr>
+            <th class="category">入居時期</th>
+            <td class="facility-name">即入居可</td>
+            <th class="category">共益費等</th>
+            <td class="facility-name">5,000円</td>
+          </tr>
+          <tr>
+            <th class="category">敷金/礼金</th>
+            <td class="facility-name">4万円/礼金なし</td>
+            <th class="category">駐車場</th>
+            <td class="facility-name">１台有（無料）</td>
+          </tr>
+          <tr>
+            <th class="category">エアコン</th>
+            <td class="facility-name">有</td>
+            <th class="category">トイレ</th>
+            <td class="facility-name">温水洗浄便座</td>
+          </tr>
+          <tr>
+            <th class="category">ｲﾝﾀｰﾌｫﾝ</th>
+            <td class="facility-name">TVドアホン</td>
+            <th class="category">その他</th>
+            <td class="facility-name">オール電化/IHコンロ</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="life-information">
+      <h2 class="life-info-title">場所</h2>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1440.3507257116084!2d142.36792513885302!3d43.779055792774145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0ce6777be9e191%3A0x72a1ecc66fad818d!2z44CSMDcwLTAwMjkg5YyX5rW36YGT5pet5bed5biC6YeR5pif55S677yS5LiB55uu77yT4oiS77yXIOODqeOCpOODlQ!5e0!3m2!1sja!2sjp!4v1750557315786!5m2!1sja!2sjp"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <!--お問い合わせ-->
+
+    <section class="property-info">
+      <h2 class="info-title">物件へのお問合せ</h2>
+      <div class="info-content">
+        <p class="info-text">
+          お問い合わせは管理会社へお願いします。<br />
+          管理会社：株式会社銀座ビルセンター<br />
+          電話番号：0166-24-2155<br />
+        </p>
+      </div>
+    </section>
+
+    <!--フッター-->
+    <footer class="footer">
+      <button
+        class="simple-button fade-in"
+        onclick="location.href='./index.html'"
+      >
+        HOMEへ戻る
+      </button>
+      <div class="footer-logo">
+        <img src="./img/fotter.jpeg" alt="ReBASE HOME" />
+      </div>
+      <div class="footer-copy-wrapper">
+        <small class="footer-copylight">&copy;2025 ReBASE HOME</small>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/page2.js"></script>
+  </body>
+</html>
