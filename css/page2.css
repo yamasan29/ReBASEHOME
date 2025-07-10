@@ -12,15 +12,23 @@ body {
   color: #333;
 }
 
-.img {
-  width: 100%;
+/* 共通の修正 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* 必要に応じて */
 }
 
-html,
-body {
-  overflow-x: hidden; /* 横スクロール対策 */
-  margin-top: 100px;
+/* 親要素にオーバーフロー防止 */
+body,
+html {
+  overflow-x: hidden;
 }
+
+
+
+/* ヘッダーのスタイル */
 
 .header {
   height: 50px;
@@ -129,6 +137,8 @@ body {
 }
 
 .property-title {
+  margin-top: 100px
+  /* ヘッダーの高さ分のマージンを追加 */;
   font-size: 2.5em; /* タイトルの文字サイズ */
   font-weight: normal; /* 太字ではない */
   color: #333;
@@ -260,11 +270,8 @@ body {
 
 /* ここから画像ギャラリーのスタイルを追加 */
 .image-gallery-container {
-  display: flex;
-  justify-content: center; /* コンテンツを中央に寄せる */
-  gap: 30px; /* メイン画像とサムネイルの間隔 */
-  max-width: 1200px; /* ギャラリー全体の最大幅 */
-  margin: 0 auto; /* 中央寄せ */
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
   background-color: #fff; /* ギャラリー部分の背景を白に */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 軽く影をつける */
@@ -272,24 +279,40 @@ body {
 }
 
 .main-image-area {
-  flex: 2; /* サムネイルエリアよりも幅を広く取る */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eee; /* メイン画像がない場合の背景色 */
-  overflow: hidden; /* 画像がはみ出さないように */
+  text-align: center;
+  margin-bottom: 15px;
+  background-color: #eee;
   border-radius: 5px;
-  position: relative; /* 必要に応じて追加 */
-  min-height: 400px; /* メイン画像の最小高さを確保 */
-  max-width: 60%; /* 親要素に対する最大幅 */
+  position: relative;
+
+  /* 高さ制限つけるならここで */
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .main-image {
-  width: 100%;
-  height: 90%;
-  display: block; /* 画像の下に余白ができないように */
-  object-fit: contain; /* 画像全体を表示し、アスペクト比を維持 */
-  transition: opacity 0.3s ease-in-out; /* フェードイン/アウトのアニメーション */
+  max-height: 100%;
+  width: auto;
+  object-fit: contain; /* ←ここ重要 */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.thumbnail-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 0;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.thumbnail-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .thumbnail-area {
@@ -307,23 +330,53 @@ body {
 }
 
 .thumbnail {
-  width: 80px; /* サムネイルの幅 */
-  height: 80px; /* サムネイルの高さ */
-  object-fit: cover; /* 画像を中央で切り取り、指定サイズに収める */
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer; /* マウスカーソルをポインターに */
-  transition: border-color 0.2s, transform 0.2s; /* ホバー時のアニメーション */
+  flex: 0 0 auto;
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.8;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  scroll-snap-align: start;
 }
 
-.thumbnail:hover {
-  border-color: #975825; /* ホバー時に青い枠線 */
-  transform: translateY(-2px); /* わずかに上に移動 */
-}
-
+.thumbnail:hover,
 .thumbnail.active {
-  border-color: #f84e1f; /* 現在選択されているサムネイルの枠線 */
-  box-shadow: 0 0 5px rgba(227, 167, 26, 0.5); /* 影を追加 */
+  opacity: 1;
+  border-color: #a6a9ac7a;
+}
+
+.main-image-area {
+  position: relative;
+  text-align: center;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(167, 158, 148, 0.8);
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#prevBtn {
+  left: 1px;
+  font-size: 10px;
+  color: #fff;
+}
+
+#nextBtn {
+  right: 1px;
+  font-size: 10px;
+  color: #fff;
 }
 
 /* レスポンシブ対応 */

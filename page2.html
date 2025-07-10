@@ -3,12 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--サイトを表示させない-->
-    <meta name="robots" content="noindex" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="ここにサイトの説明を入れる" />
     <meta name="keywords" content="旭川物件,旭川賃貸,旭川不動産,旭川" />
-    <meta name="author" content="ゆうき" />
+    <meta name="author" content="ReBASE HOME" />
 
     <title>物件を見る</title>
 
@@ -80,85 +76,102 @@
     <!-- 物件画像ギャラリー -->
     <div class="image-gallery-container">
       <div class="main-image-area">
+        <button id="prevBtn" class="slide-btn">＜</button>
         <img
           id="mainImage"
           src="./img/gaikann2.jpg"
           alt="物件外観"
           class="main-image"
-          data-full="./img/gaikann2.jpg"
         />
+        <button id="nextBtn" class="slide-btn">＞</button>
       </div>
-      <div class="thumbnail-area">
-        <div class="thumbnail-row">
-          <img
-            src="./img/gaikannyoko.jpg"
-            alt="物件外観"
-            class="thumbnail"
-            data-full="./img/gaikannyoko.jpg"
-          />
-          <img
-            src="./img/ima.jpeg"
-            alt="室内1"
-            class="thumbnail"
-            data-full="./img/ima.jpeg"
-          />
-        </div>
-        <div class="thumbnail-row">
-          <img
-            src="./img/okuyuki.jpeg"
-            alt="室内2"
-            class="thumbnail"
-            data-full="./img/okuyuki.jpeg"
-          />
-          <img
-            src="./img/kittin2.jpeg"
-            alt="キッチン"
-            class="thumbnail"
-            data-full="./img/kittin2.jpeg"
-          />
-        </div>
-        <div class="thumbnail-row">
-          <img
-            src="./img/senmen.jpeg"
-            alt="洗面台"
-            class="thumbnail"
-            data-full="./img/senmen.jpeg"
-          />
-          <img
-            src="./img/furo.jpeg"
-            alt="風呂"
-            class="thumbnail"
-            data-full="./img/furo.jpeg"
-          />
-        </div>
-        <div class="thumbnail-row">
-          <img
-            src="./img/toile.jpeg"
-            alt="トイレシャワー"
-            class="thumbnail"
-            data-full="./img/toile.jpeg"
-          />
-          <img
-            src="./img/kutudana.jpeg"
-            alt="靴置き場"
-            class="thumbnail"
-            data-full="./img/kutudana.jpeg"
-          />
-        </div>
-        <div class="thumbnail-row">
-          <img
-            src="./img/monita.jpeg"
-            alt="モニター"
-            class="thumbnail"
-            data-full="./img/monita.jpeg"
-          />
-          <img
-            src="./img/tansu.jpeg"
-            alt="収納"
-            class="thumbnail"
-            data-full="./img/tansu.jpeg"
-          />
-        </div>
+
+      <!-- サムネイル：1列に横スクロール -->
+      <div class="thumbnail-scroll">
+        <img
+          src="./img/gaikann2.jpg"
+          class="thumbnail active"
+          data-full="./img/gaikann2.jpg"
+          alt="外観正面"
+        />
+        <img
+          src="./img/gaikannyoko.jpg"
+          class="thumbnail"
+          data-full="./img/gaikannyoko.jpg"
+          alt="外観横"
+        />
+        <img
+          src="./img/madori.JPG"
+          class="thumbnail"
+          data-full="./img/madori.JPG"
+          alt="間取り"
+        />
+        <img
+          src="./img/ima.jpeg"
+          class="thumbnail"
+          data-full="./img/ima.jpeg"
+          alt="室内1"
+        />
+        <img
+          src="./img/okuyuki.jpeg"
+          class="thumbnail"
+          data-full="./img/okuyuki.jpeg"
+          alt="室内2"
+        />
+        <img
+          src="./img/kittin2.jpeg"
+          class="thumbnail"
+          data-full="./img/kittin2.jpeg"
+          alt="キッチン"
+        />
+        <img
+          src="./img/senmen.jpeg"
+          class="thumbnail"
+          data-full="./img/senmen.jpeg"
+          alt="洗面"
+        />
+        <img
+          src="./img/sennmenn_syuunou.jpeg"
+          class="thumbnail"
+          data-full="./img/sennmenn_syuunou.jpeg"
+          alt="洗面収納"
+        />
+        <img
+          src="./img/furo_sentaku.jpeg"
+          class="thumbnail"
+          data-full="./img/furo_sentaku.jpeg"
+          alt="風呂"
+        />
+        <img
+          src="./img/furo.jpeg"
+          class="thumbnail"
+          data-full="./img/furo.jpeg"
+          alt="風呂"
+        />
+        <img
+          src="./img/toile.jpeg"
+          class="thumbnail"
+          data-full="./img/toile.jpeg"
+          alt="トイレ"
+        />
+        <img
+          src="./img/zenntai.jpeg"
+          class="thumbnail"
+          data-full="./img/zenntai.jpeg"
+          alt="全体"
+        />
+        <img
+          src="./img/monita.jpeg"
+          class="thumbnail"
+          data-full="./img/monita.jpeg"
+          alt="ｲﾝﾀｰﾌｫﾝﾓﾆﾀｰ"
+        />
+        <img
+          src="./img/kutudana.jpeg"
+          class="thumbnail"
+          data-full="./img/kutudana.jpeg"
+          alt="靴箱"
+        />
       </div>
     </div>
 
@@ -259,7 +272,7 @@
       <div class="info-content">
         <p class="info-text">
           お問い合わせは管理会社へお願いします。<br />
-          管理会社：株式会社銀座ビルセンター<br />
+          管理会社：株式会社銀座センタービル<br />
           電話番号：0166-24-2155<br />
         </p>
       </div>

@@ -50,38 +50,51 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //物件画像
-document.addEventListener("DOMContentLoaded", function () {
-  const mainImage = document.getElementById("mainImage");
-  const thumbnails = document.querySelectorAll(".thumbnail");
+// gallery.js
 
-  // 初期表示で最初のサムネイルをアクティブにする
-  if (thumbnails.length > 0) {
-    thumbnails[0].classList.add("active");
+document.addEventListener('DOMContentLoaded', function () {
+  const mainImage = document.getElementById('mainImage');
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  const images = Array.from(thumbnails).map(t => t.getAttribute('data-full'));
+  let currentIndex = 0;
+
+  function updateMainImage(index) {
+    mainImage.src = images[index];
+
+    thumbnails.forEach((t, i) => {
+      t.classList.toggle('active', i === index);
+
+      if (i === index) {
+        t.scrollIntoView({
+          behavior: 'smooth',
+          inline: 'center',
+          block: 'nearest'
+        });
+      }
+    });
+
+    currentIndex = index;
   }
 
-  thumbnails.forEach((thumbnail) => {
-    thumbnail.addEventListener("click", function () {
-      // 現在アクティブなサムネイルからactiveクラスを削除
-      const currentActive = document.querySelector(".thumbnail.active");
-      if (currentActive) {
-        currentActive.classList.remove("active");
-      }
-
-      // クリックされたサムネイルにactiveクラスを追加
-      this.classList.add("active");
-
-      // メイン画像をフェードアウトさせる
-      mainImage.style.opacity = 0;
-
-      // 画像のロードが完了してから表示する（少し遅延させてフェードアウトを強調）
-      setTimeout(() => {
-        const newImageSrc = this.getAttribute("data-full");
-        mainImage.src = newImageSrc; // 新しい画像のパスを設定
-        mainImage.alt = this.alt; // altテキストも更新
-
-        // 新しい画像が表示されたらフェードインさせる
-        mainImage.style.opacity = 1;
-      }, 300); // CSSのtransition時間と同じか少し長めに設定
+  // サムネイルクリック
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+      updateMainImage(index);
     });
+  });
+
+  // 前へ
+  prevBtn.addEventListener('click', () => {
+    const newIndex = (currentIndex - 1 + images.length) % images.length;
+    updateMainImage(newIndex);
+  });
+
+  // 次へ
+  nextBtn.addEventListener('click', () => {
+    const newIndex = (currentIndex + 1) % images.length;
+    updateMainImage(newIndex);
   });
 });
